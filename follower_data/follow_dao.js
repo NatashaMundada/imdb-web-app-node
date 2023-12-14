@@ -1,10 +1,12 @@
-import follow_model from "./follow_model";
-export const findAllFollowingUsers = (userId) => follow_model.findById(userId);
+import follow from "./follow_model.js";
+
+export const findAllFollowingUsers = (userId) => follow.findById(userId);
 export const followUser = (userId, userNameToFollow) => {
     try {
-        let followData =  follow_model.findOne({ user: userId });
+        let followData =  follow.findOne({ user: userId });
+        console.log(followData)
         if (!followData) {
-          followData = new follow_model({ user: userId, following: [] });
+          followData = new follow({ user: userId, following: [] });
         }
         if (!followData.following.includes(userNameToFollow)) {
           followData.following.push(userNameToFollow);

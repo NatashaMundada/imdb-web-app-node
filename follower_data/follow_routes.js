@@ -17,8 +17,8 @@ function FollowRoutes(app) {
           res.status(500).json({ error: "Internal Server Error" });
         }
     };
-    app.get("/api/following", findAllFollowingUsers);
-    app.post("/api/following", followUser);
+    app.get("/api/following/:userId", findAllFollowingUsers);
+    app.post("/api/following/:userId", followUser);
 }
 
 export default FollowRoutes;

@@ -11,6 +11,7 @@ import "dotenv/config";
 import MovieRoutes from './movies/movie_routes.js';
 import testMovieRoutes from './testMovies/movie_routes.js';
 import TestReviewRoutes from './testReviews/review_routes.js';
+import FollowRoutes from './follower_data/follow_routes.js';
 
 // Vamshika's db
 const CONNECTION_STRING = 'mongodb://127.0.0.1:27017/Kanbas'
@@ -54,4 +55,5 @@ MovieRoutes(app);
 Hello(app);
 testMovieRoutes(app);
 TestReviewRoutes(app);
+FollowRoutes(app);
 app.listen(4000)
