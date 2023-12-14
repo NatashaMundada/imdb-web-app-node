@@ -7,7 +7,7 @@ const testMovieSchema = new mongoose.Schema(
     description: { type: String },
     actors: { type: Array },
     rating: { type: Number },
-    primary_image: { type: Object },
+    primaryImage: { type: Object },
   },
   { collection: "test_movies" }
 );
