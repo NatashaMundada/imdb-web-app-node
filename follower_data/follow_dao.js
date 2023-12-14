@@ -1,6 +1,6 @@
 import follow from "./follow_model.js";
 
-export const findAllFollowingUsers = (userId) => follow.findById(userId);
+export const findAllFollowingUsers = (userId) => follow.find({userId: userId});
 export const followUser = async (userId, userNameToFollow) => {
   try {
     if (!userId) {
