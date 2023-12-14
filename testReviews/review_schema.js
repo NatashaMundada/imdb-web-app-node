@@ -16,6 +16,7 @@ const TestReviewSchema = new mongoose.Schema(
     },
     rating: { type: Number, required: true },
     comment: String,
+    blogLink: String
   },
   { collection: "reviews" }
 );
